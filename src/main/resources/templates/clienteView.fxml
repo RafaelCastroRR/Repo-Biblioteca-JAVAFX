@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.rafaelcastro.webapp.biblioteca.controller.FXController.ClienteControllerFx">
+   <children>
+      <ImageView fitHeight="700.0" fitWidth="1000.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/Diseño%20sin%20título%20(1).png" />
+         </image>
+      </ImageView>
+      <TextField fx:id="tfDpi" layoutX="24.0" layoutY="196.0" promptText="DPI" />
+      <TextField fx:id="tfNombreCliente" layoutX="24.0" layoutY="271.0" promptText="Nombre" />
+      <TextField fx:id="tfApellido" layoutX="24.0" layoutY="350.0" promptText="Apellido" />
+      <TextField fx:id="tfTelefono" layoutX="30.0" layoutY="417.0" promptText="Telefono" />
+      <TableView fx:id="tblCliente" layoutX="235.0" layoutY="33.0" onMouseClicked="#cargarFormEditar" prefHeight="450.0" prefWidth="716.0">
+        <columns>
+          <TableColumn fx:id="colDpi" prefWidth="161.0" text="DPI" />
+          <TableColumn fx:id="colNombreCliente" prefWidth="177.0" text="Nombre" />
+            <TableColumn fx:id="colApellido" prefWidth="168.0" text="Apellido" />
+            <TableColumn fx:id="colTelefono" prefWidth="209.0" text="Telefono" />
+        </columns>
+      </TableView>
+      <Button fx:id="btnGuardar" layoutX="47.0" layoutY="483.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="43.0" prefWidth="85.0" text="Guardar" textAlignment="CENTER" />
+      <Button fx:id="btnLimpiar" layoutX="190.0" layoutY="555.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="43.0" prefWidth="91.0" text="Limpiar Formulario" textAlignment="CENTER" wrapText="true" />
+      <Button fx:id="btnEliminar" layoutX="47.0" layoutY="558.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="36.0" prefWidth="85.0" text="Eliminar" textAlignment="CENTER" />
+      <Text layoutX="36.0" layoutY="185.0" strokeType="OUTSIDE" strokeWidth="0.0" text="DPI" />
+      <Text layoutX="27.0" layoutY="263.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nombre" />
+      <Text layoutX="27.0" layoutY="337.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Apellido" />
+      <Text layoutX="32.0" layoutY="404.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Telefono" />
+   </children>
+</AnchorPane>
